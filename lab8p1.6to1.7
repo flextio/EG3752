@@ -1,13 +1,13 @@
-//Code Snippet Lab 9 P 1.6
+//Code Snippet Lab 8 P 1.6
 
 @NamedQuery(name = "Book.findLikeTitle", query = "SELECT b FROM Book b WHERE b.title LIKE :title"),
 
-//Code Snippet Lab 9 P 1.7.i
+//Code Snippet Lab 8 P 1.7.i
 
 @PersistenceContext
 private EntityManager em;
 
-//Code Snippet Lab 9 P 1.7.ii
+//Code Snippet Lab 8 P 1.7.ii
 
 TypedQuery<Book> results = em.createNamedQuery("Book.findLikeTitle", Book.class);
 results.setParameter("title", "%" + searchTerm + "%");
